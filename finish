@@ -1,6 +1,0 @@
-#!/bin/bash
-
-CONTAINER_NAME="talently"
-
-# Run tests
-docker stop $CONTAINER_NAME
