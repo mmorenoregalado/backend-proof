@@ -81,7 +81,6 @@ Intenté simular CQRS siguiendo el flujo desde la clase `VillaPeruana` para inst
 devolviendo una clase de tipo `Response` para modelar una posible respuesta. 
 
 # Preguntas de conocimiento en Laravel
-
 ---
 
 1. Qué paquete o estrategia utilizarías para levantar un sistema de administración rápidamente? (Autenticación y CRUDs)
