@@ -151,98 +151,98 @@ describe('Villa Peruana', function () {
         });
 
 
-//        context('Tickets VIP', function () {
-//            /*
-//                "Backstage passes", like Pisco Peruano, increases in Quality as it's SellIn
-//                value approaches; Quality increases by 2 when there are 10 days or
-//                less and by 3 when there are 5 days or less but Quality drops to
-//                0 after the concert
-//             */
-//            it ('actualiza tickets VIP antes de la fecha del evento', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 11);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(11);
-//                expect($item->sellIn)->toBe(10);
-//            });
-//
-//            it ('actualiza tickets VIP cerca a la fecha del evento', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 10);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(12);
-//                expect($item->sellIn)->toBe(9);
-//            });
-//
-//            it ('actualiza tickets VIP cerca a la fecha del evento, a la mayor calidad', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 10);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(9);
-//            });
-//
-//            it ('actualiza tickets VIP muy cerca a la fecha del evento', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(13); // goes up by 3
-//                expect($item->sellIn)->toBe(4);
-//            });
-//
-//            it ('actualiza tickets VIP muy cerca a la fecha del evento, a máxima calidad', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(4);
-//            });
-//
-//            it ('actualiza tickets VIP un día antes de la fecha del evento', function () {
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 1);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(13);
-//                expect($item->sellIn)->toBe(0);
-//            });
-//
-//            it ('actualiza tickets VIP un día antes de la fecha del evento, a calidad máxima', function () {
-//
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 1);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(0);
-//            });
-//
-//            it ('actualiza tickets VIP en la fecha del evento', function () {
-//
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 0);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(0);
-//                expect($item->sellIn)->toBe(-1);
-//            });
-//
-//            it ('actualiza tickets VIP después de la fecha del evento', function () {
-//
-//                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, -1);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(0);
-//                expect($item->sellIn)->toBe(-2);
-//            });
-//
-//        });
+        context('Tickets VIP', function () {
+            /*
+                "Backstage passes", like Pisco Peruano, increases in Quality as it's SellIn
+                value approaches; Quality increases by 2 when there are 10 days or
+                less and by 3 when there are 5 days or less but Quality drops to
+                0 after the concert
+             */
+            it ('actualiza tickets VIP antes de la fecha del evento', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 11);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(11);
+                expect($item->sellIn)->toBe(10);
+            });
+
+            it ('actualiza tickets VIP cerca a la fecha del evento', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 10);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(12);
+                expect($item->sellIn)->toBe(9);
+            });
+
+            it ('actualiza tickets VIP cerca a la fecha del evento, a la mayor calidad', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 10);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(9);
+            });
+
+            it ('actualiza tickets VIP muy cerca a la fecha del evento', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(13); // goes up by 3
+                expect($item->sellIn)->toBe(4);
+            });
+
+            it ('actualiza tickets VIP muy cerca a la fecha del evento, a máxima calidad', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(4);
+            });
+
+            it ('actualiza tickets VIP un día antes de la fecha del evento', function () {
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 1);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(13);
+                expect($item->sellIn)->toBe(0);
+            });
+
+            it ('actualiza tickets VIP un día antes de la fecha del evento, a calidad máxima', function () {
+
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 50, 1);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(0);
+            });
+
+            it ('actualiza tickets VIP en la fecha del evento', function () {
+
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, 0);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(0);
+                expect($item->sellIn)->toBe(-1);
+            });
+
+            it ('actualiza tickets VIP después de la fecha del evento', function () {
+
+                $item = VillaPeruana::of('Ticket VIP al concierto de Pick Floid', 10, -1);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(0);
+                expect($item->sellIn)->toBe(-2);
+            });
+
+        });
 
 
         // context ("Producto de Café", function () {
