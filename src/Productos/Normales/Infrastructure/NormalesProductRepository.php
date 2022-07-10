@@ -14,16 +14,24 @@ final class NormalesProductRepository implements NormalesRepository
 
     public function calcularSellIn(NormalProduct $product): NormalProduct
     {
-        $newQuality = $product->quality()->value();
-        $newSellIn = $product->quality()->value() - 1;
+        $sellIn = $product->sellIn()->value();
+        $quality = $product->quality()->value();
 
-        ($product->quality()->isBiggerThan(0)) ? $newQuality-- : $newQuality -= 2;
+        $quality = $this->calcularQuality($quality, $sellIn);
 
+        $sellIn--;
 
         return NormalProduct::create(
             $product->name(),
-            new NormalProductQuality($newQuality),
-            new NormalProductSellIn($newSellIn)
+            new NormalProductQuality($quality),
+            new NormalProductSellIn($sellIn)
         );
+    }
+
+    function calcularQuality(int $quality, int $sellIn): int
+    {
+        return ($sellIn > 0) ?
+            $quality - 1 :
+            $quality - 2;
     }
 }

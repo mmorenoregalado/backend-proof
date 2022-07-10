@@ -11,25 +11,39 @@ use App\Productos\Normales\Domain\NormalesRepository;
 use App\Productos\Normales\Domain\NormalProductName;
 use App\Productos\Normales\Domain\NormalProductQuality;
 use App\Productos\Normales\Domain\NormalProductSellIn;
-use App\Shared\Domain\ProductDomain\ProductTick;
+use App\Productos\Normales\Infrastructure\NormalesProductRepository;
+use App\Shared\Domain\Bus\Query\Response;
 
 final class NormalesCounter implements NormalesCalculator
 {
     private NormalesRepository $repository;
 
-    public function __construct(NormalesRepository $repository)
+    public function __construct()
     {
-        $this->repository($repository);
+        $this->repository = new NormalesProductRepository();
     }
 
-    public function __invoke(string $name, int $quality, int $sellIn)
+    public function __invoke(string $name, int $quality, int $sellIn): Response
     {
         $normal = NormalProduct::create(
             new NormalProductName($name),
             new NormalProductQuality($quality),
             new NormalProductSellIn($sellIn)
         );
-        $normalProduct = $this->repository->calcularSellIn($normal);
+        $product =  $this->repository->calcularSellIn($normal);
+
+        return  $this->toResponse($product);
+
+    }
+
+
+    private function toResponse(NormalProduct $product): NormalesProductResponse
+    {
+        return new NormalesProductResponse(
+            $product->name()->value(),
+            $product->quality()->value(),
+            $product->sellIn()->value()
+        );
     }
 
 }

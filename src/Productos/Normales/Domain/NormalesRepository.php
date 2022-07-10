@@ -6,7 +6,7 @@ namespace App\Productos\Normales\Domain;
 
 use App\Shared\Domain\Repository;
 
-interface NormalesRepository
+interface NormalesRepository extends Repository
 {
     public function calcularSellIn(NormalProduct $normal): NormalProduct;
 }

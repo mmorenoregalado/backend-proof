@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Productos\Normales\Application\NormalesCounter;
+use App\Productos\Normales\Application\NormalesProductResponse;
 use App\Productos\Normales\Domain\NormalesCalculator;
 use App\Shared\Infrastructure\Injector;
 
@@ -21,7 +22,8 @@ final class VillaPeruana
         $this->sellIn = $sellIn;
     }
 
-    public static function of($name, $quality, $sellIn) {
+    public static function of($name, $quality, $sellIn)
+    {
         return new static($name, $quality, $sellIn);
     }
 
@@ -32,12 +34,12 @@ final class VillaPeruana
     public function tick()
     {
 
-//        $producto = Injector::injectTo($this->name);
-        $producto = new NormalesCounter();
+        $producto = Injector::injectTo($this->name);
+
         $response = $producto->__invoke($this->name, $this->quality, $this->sellIn);
 
-        $this->quality = $response->quality;
-        $this->sellIn = $response->quality;
+        $this->quality = $response->quality();
+        $this->sellIn = $response->sellIn();
 
     }
 
