@@ -117,40 +117,40 @@ describe('Villa Peruana', function () {
             });
 
         });
-//
-//
-//        context('Tumi', function () {
-//
-//            it ('actualiza elementos Tumi antes de la fecha de venta', function () {
-//                $item = VillaPeruana::of('Tumi de Oro Moche', 10, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(10);
-//                expect($item->sellIn)->toBe(5);
-//            });
-//
-//            it ('actualiza elementos Tumi en la fecha de venta', function () {
-//                $item = VillaPeruana::of('Tumi de Oro Moche', 10, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(10);
-//                expect($item->sellIn)->toBe(5);
-//            });
-//
-//            it ('actualiza elementos Tumi después de la fecha de venta', function () {
-//                $item = VillaPeruana::of('Tumi de Oro Moche', 10, -1);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(10);
-//                expect($item->sellIn)->toBe(-1);
-//            });
-//
-//        });
-//
-//
+
+
+        context('Tumi', function () {
+
+            it ('actualiza elementos Tumi antes de la fecha de venta', function () {
+                $item = VillaPeruana::of('Tumi de Oro Moche', 10, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(5);
+            });
+
+            it ('actualiza elementos Tumi en la fecha de venta', function () {
+                $item = VillaPeruana::of('Tumi de Oro Moche', 10, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(5);
+            });
+
+            it ('actualiza elementos Tumi después de la fecha de venta', function () {
+                $item = VillaPeruana::of('Tumi de Oro Moche', 10, -1);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(-1);
+            });
+
+        });
+
+
 //        context('Tickets VIP', function () {
 //            /*
 //                "Backstage passes", like Pisco Peruano, increases in Quality as it's SellIn

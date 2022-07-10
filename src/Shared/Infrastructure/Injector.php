@@ -8,6 +8,7 @@ use App\Productos\Product\Domain\ProductQuality;
 use App\Productos\Product\Domain\TumiProductQuality;
 use App\Productos\Product\Infrastructure\NormalProductRepository;
 use App\Productos\Product\Infrastructure\PiscoPeruanoProductRepository;
+use App\Productos\Product\Infrastructure\TicketVipRepository;
 use App\Productos\Product\Infrastructure\TumiProductRepository;
 
 final class Injector
@@ -16,8 +17,7 @@ final class Injector
         'normal' => NormalProductRepository::class,
         'Pisco Peruano' => PiscoPeruanoProductRepository::class,
         'Tumi de Oro Moche' => TumiProductRepository::class,
-        'TumiProductQuality' => TumiProductQuality::class,
-        'ProductQuality' => ProductQuality::class
+        'Ticket VIP al concierto de Pick Floid' => TicketVipRepository::class,
     ];
 
     public static function injectTo(string $class)

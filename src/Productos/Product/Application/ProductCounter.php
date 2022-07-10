@@ -9,7 +9,6 @@ use App\Productos\Product\Domain\Product;
 use App\Productos\Product\Domain\ProductName;
 use App\Productos\Product\Domain\ProductQuality;
 use App\Productos\Product\Domain\ProductSellIn;
-use App\Productos\Product\Domain\Quality;
 use App\Productos\Product\Domain\Repository;
 use App\Shared\Domain\Bus\Query\Response;
 use App\Shared\Infrastructure\Injector;
@@ -17,7 +16,6 @@ use App\Shared\Infrastructure\Injector;
 final class ProductCounter
 {
     private Repository $repository;
-    private Quality $quality;
 
     public function __construct(string $name)
     {
@@ -36,14 +34,6 @@ final class ProductCounter
         return  $this->toResponse($product);
 
     }
-
-//    private function QualityProduct(ProductName $name): Quality
-//    {
-//        if (Tumi) {
-//        }
-//
-//        return Injector::injectTo($name->value());
-//    }
 
     private function toResponse(Product $product): ProductResponse
     {

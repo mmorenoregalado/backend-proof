@@ -8,17 +8,17 @@ namespace App\Productos\Product\Domain;
 final class Product
 {
     private ProductName $name;
-    private Quality $quality;
+    private ProductQuality $quality;
     private ProductSellIn $sellIn;
 
-    public function __construct(ProductName $name, Quality $quality, ProductSellIn $sellIn)
+    public function __construct(ProductName $name, ProductQuality $quality, ProductSellIn $sellIn)
     {
         $this->name = $name;
         $this->quality = $quality;
         $this->sellIn = $sellIn;
     }
 
-    public static function create(ProductName $name, Quality $quality, ProductSellIn $sellIn): self
+    public static function create(ProductName $name, ProductQuality $quality, ProductSellIn $sellIn): self
     {
         return new self($name, $quality, $sellIn);
     }
@@ -28,7 +28,7 @@ final class Product
         return $this->name;
     }
 
-    public function quality(): Quality
+    public function quality(): ProductQuality
     {
         return $this->quality;
     }

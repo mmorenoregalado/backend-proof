@@ -6,7 +6,7 @@ namespace App\Productos\Product\Domain;
 
 use App\Shared\Domain\ValueObject\IntValueObject;
 
-final class ProductQuality extends IntValueObject implements Quality
+final class ProductQuality extends IntValueObject
 {
     public const MAXIMO = 50;
     public const MINIMO = 0;
