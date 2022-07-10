@@ -22,4 +22,6 @@ abstract class ProductRepository
             new ProductSellIn($sellIn)
         );
     }
+
+    abstract function calcularQuality(int $quality, int $sellIn): int;
 }

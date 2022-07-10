@@ -6,5 +6,5 @@ namespace App\Productos\Product\Domain;
 
 interface Repository
 {
-    function calcularQuality(int $quality, int $sellIn): int;
+
 }
