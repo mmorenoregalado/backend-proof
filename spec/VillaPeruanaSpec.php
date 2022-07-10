@@ -51,72 +51,72 @@ describe('Villa Peruana', function () {
         });
 
 
-//        context('Pisco Peruano', function () {
-//
-//            it ('actualiza Pisco Peruano antes de la fecha de venta', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 10, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(11);
-//                expect($item->sellIn)->toBe(4);
-//            });
-//
-//            it ('actualiza Pisco Peruano antes de la fecha de venta con máxima calidad', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 50, 5);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(4);
-//            });
-//
-//            it ('actualiza Pisco Peruano en la fecha de venta', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 10, 0);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(12);
-//                expect($item->sellIn)->toBe(-1);
-//            });
-//
-//            it ('actualiza Pisco Peruano en la fecha de venta, cerca a su máxima calidad', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 49, 0);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(-1);
-//            });
-//
-//            it ('actualiza Pisco Peruano en la fecha de venta con máxima calidad', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 50, 0);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(-1);
-//            });
-//
-//            it ('actualiza Pisco Peruano después de la fecha de venta', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 10, -10);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(12);
-//                expect($item->sellIn)->toBe(-11);
-//            });
-//
-//             it ('actualiza Briem items después de la fecha de venta con máxima calidad', function () {
-//                $item = VillaPeruana::of('Pisco Peruano', 50, -10);
-//
-//                $item->tick();
-//
-//                expect($item->quality)->toBe(50);
-//                expect($item->sellIn)->toBe(-11);
-//            });
-//
-//        });
+        context('Pisco Peruano', function () {
+
+            it ('actualiza Pisco Peruano antes de la fecha de venta', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 10, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(11);
+                expect($item->sellIn)->toBe(4);
+            });
+
+            it ('actualiza Pisco Peruano antes de la fecha de venta con máxima calidad', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 50, 5);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(4);
+            });
+
+            it ('actualiza Pisco Peruano en la fecha de venta', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 10, 0);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(12);
+                expect($item->sellIn)->toBe(-1);
+            });
+
+            it ('actualiza Pisco Peruano en la fecha de venta, cerca a su máxima calidad', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 49, 0);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(-1);
+            });
+
+            it ('actualiza Pisco Peruano en la fecha de venta con máxima calidad', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 50, 0);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(-1);
+            });
+
+            it ('actualiza Pisco Peruano después de la fecha de venta', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 10, -10);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(12);
+                expect($item->sellIn)->toBe(-11);
+            });
+
+             it ('actualiza Briem items después de la fecha de venta con máxima calidad', function () {
+                $item = VillaPeruana::of('Pisco Peruano', 50, -10);
+
+                $item->tick();
+
+                expect($item->quality)->toBe(50);
+                expect($item->sellIn)->toBe(-11);
+            });
+
+        });
 //
 //
 //        context('Tumi', function () {

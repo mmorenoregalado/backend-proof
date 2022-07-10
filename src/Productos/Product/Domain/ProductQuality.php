@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Domain\ProductDomain;
+namespace App\Productos\Product\Domain;
 
 use App\Shared\Domain\ValueObject\IntValueObject;
 
-abstract class ProductQuality extends IntValueObject
+final class ProductQuality extends IntValueObject implements Quality
 {
     public const MAXIMO = 50;
     public const MINIMO = 0;

@@ -2,9 +2,9 @@
 
 namespace App;
 
-use App\Productos\Normales\Application\NormalesCounter;
-use App\Productos\Normales\Application\NormalesProductResponse;
-use App\Productos\Normales\Domain\NormalesCalculator;
+use App\Productos\Product\Application\ProductCounter;
+use App\Productos\Product\Application\ProductResponse;
+use App\Productos\Product\Domain\NormalesCalculator;
 use App\Shared\Infrastructure\Injector;
 
 final class VillaPeruana
@@ -27,14 +27,10 @@ final class VillaPeruana
         return new static($name, $quality, $sellIn);
     }
 
-    // LLamar al contenedor de dependencias
-    //enviar por el método
-    //guardar el resultado
-
     public function tick()
     {
 
-        $producto = Injector::injectTo($this->name);
+        $producto = new ProductCounter($this->name);
 
         $response = $producto->__invoke($this->name, $this->quality, $this->sellIn);
 

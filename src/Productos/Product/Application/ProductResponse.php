@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Productos\Normales\Application;
+namespace App\Productos\Product\Application;
 
 
 use App\Shared\Domain\Bus\Query\Response;
 
-final class NormalesProductResponse implements Response
+final class ProductResponse implements Response
 {
     private string $nombre;
     private int $quality;
