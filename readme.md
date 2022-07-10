@@ -1,7 +1,8 @@
 # Talently Challenge
 
-> ℹ️ En terminos generales, además del objetivo de superar el reto, en este proyecto en relación a las buenas prácticas 
-> y clean code he aplicando conceptos de **Arquitectura Hexagona , Domain Driven Desing**, he intentado también 
+> ℹ️ **Descripción:** En terminos generales, además del objetivo de superar el reto, en este proyecto en relación a las 
+> buenas prácticas 
+> y clean code he aplicando conceptos de **Arquitectura Hexagona , Domain Driven Design**, he intentado también 
 > simular el comportamiento de **CQRS** y también biene aplicado el patrón **Repository**. Para aplicar algunos 
 > conceptos mencionados anteriormente, cree un **Pseudo Inyector de Dependencias**. Con todo esto estaríamos 
 > aplicando lo más posible para este proyecto los principios **SOLID**.
