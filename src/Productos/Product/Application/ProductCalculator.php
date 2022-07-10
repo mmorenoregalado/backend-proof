@@ -13,7 +13,7 @@ use App\Productos\Product\Domain\Repository;
 use App\Shared\Domain\Bus\Query\Response;
 use App\Shared\Infrastructure\Injector;
 
-final class ProductCounter
+final class ProductCalculator
 {
     private Repository $repository;
 

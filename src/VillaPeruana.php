@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Productos\Product\Application\ProductCounter;
+use App\Productos\Product\Application\ProductCalculator;
 use App\Productos\Product\Application\ProductResponse;
 use App\Productos\Product\Domain\NormalesCalculator;
 use App\Shared\Infrastructure\Injector;
@@ -30,7 +30,7 @@ final class VillaPeruana
     public function tick()
     {
 
-        $producto = new ProductCounter($this->name);
+        $producto = new ProductCalculator($this->name);
 
         $response = $producto->__invoke($this->name, $this->quality, $this->sellIn);
 

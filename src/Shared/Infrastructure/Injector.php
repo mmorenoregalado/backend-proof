@@ -6,6 +6,7 @@ namespace App\Shared\Infrastructure;
 
 use App\Productos\Product\Domain\ProductQuality;
 use App\Productos\Product\Domain\TumiProductQuality;
+use App\Productos\Product\Infrastructure\CafeProductRepository;
 use App\Productos\Product\Infrastructure\NormalProductRepository;
 use App\Productos\Product\Infrastructure\PiscoPeruanoProductRepository;
 use App\Productos\Product\Infrastructure\TicketVipRepository;
@@ -18,6 +19,7 @@ final class Injector
         'Pisco Peruano' => PiscoPeruanoProductRepository::class,
         'Tumi de Oro Moche' => TumiProductRepository::class,
         'Ticket VIP al concierto de Pick Floid' => TicketVipRepository::class,
+        'Café Altocusco' => CafeProductRepository::class,
     ];
 
     public static function injectTo(string $class)
